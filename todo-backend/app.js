@@ -6,7 +6,10 @@ const path=require('path');
 
 const express=require('express');
 const bodyParser = require('body-parser');
-const cors=require('cors');
+app.use(cors({
+  origin: ["https://todo.anubhavsingh.website"],
+  credentials: true,
+}));
 const { default: mongoose } = require('mongoose');
 //==mongo url ==
 const mongoUrl = process.env.MONGO_URI;
