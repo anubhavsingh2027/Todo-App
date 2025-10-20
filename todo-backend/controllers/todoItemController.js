@@ -1,4 +1,4 @@
-const TodoItem = require("../models/TodoItem");
+const TodoItem = require("../models/todoItem");
 
 exports.createTodoItem = async (req, res, next) => {
   console.log(req.body);
