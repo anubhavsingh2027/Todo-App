@@ -6,10 +6,6 @@ const path=require('path');
 
 const express=require('express');
 const bodyParser = require('body-parser');
-app.use(cors({
-  origin: ["https://todo.anubhavsingh.website"],
-  credentials: true,
-}));
 const { default: mongoose } = require('mongoose');
 //==mongo url ==
 const mongoUrl = process.env.MONGO_URI;
@@ -24,6 +20,10 @@ const todoRouter = require('./router/todoItemRouter');
 //serever create
 const app=express();
 
+app.use(cors({
+  origin: ["https://todo.anubhavsingh.website"],
+  credentials: true,
+}));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cors());
 app.use(express.json());
