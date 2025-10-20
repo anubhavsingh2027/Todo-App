@@ -1,6 +1,7 @@
 //core module
 require('dotenv').config();
 const path=require('path');
+const cors = require("cors");
 
 //External module
 
@@ -20,16 +21,16 @@ const todoRouter = require('./router/todoItemRouter');
 //serever create
 const app=express();
 
-app.use(cors({
-  origin: ["https://todo.anubhavsingh.website"],
-  credentials: true,
-}));
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(cors());
+
 app.use(express.json());
 app.use(express.static(path.join(rootdir,'public')));
 
 
+app.use(cors({
+  origin: ["https://todo.anubhavsingh.website"],
+  credentials: true,
+}));
 
 
 app.use("/api/todo",todoRouter)
