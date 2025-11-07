@@ -23,7 +23,7 @@ export const getItemsFromServer = async () => {
 
 export const markItemCompletedOnServer = async (id) => {
   const response = await fetch(
-    `https://todo-backend-5t1x.onrender.com/api/todo//${id}/completed`,
+    `https://todo-backend-5t1x.onrender.com/api/todo/${id}/completed`,
     {
       method: "PUT",
     }
@@ -33,7 +33,7 @@ export const markItemCompletedOnServer = async (id) => {
 };
 
 export const deleteItemFromServer = async (id) => {
-  await fetch(`https://todo-backend-5t1x.onrender.com/api/todo//${id}`, {
+  await fetch(`https://todo-backend-5t1x.onrender.com/api/todo/${id}`, {
     method: "DELETE",
   });
   return id;
