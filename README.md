@@ -10,6 +10,7 @@ This **To-Do App** helps you manage your daily tasks with a clean interface, smo
 https://todo-app-jade-six-65.vercel.app/
 
 ### 🖼️ Preview
+
 <p align="center">
   <img src="https://todo-app-jade-six-65.vercel.app/WebsiteImg.png" alt="To-Do App Preview" width="800" />
 </p>
